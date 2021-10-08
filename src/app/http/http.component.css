@@ -1,0 +1,10 @@
+button {
+  margin: 50px 0 0 150px;
+}
+* {
+  overflow-x: hidden;
+}
+
+.col-xs-12 {
+  margin: 15px 130px 0 15px;
+}

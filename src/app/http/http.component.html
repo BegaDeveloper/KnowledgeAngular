@@ -1,0 +1,49 @@
+<div class="constructor">
+  <div class="col-xs-12">
+    <button class="btn btn-info mb-4" (click)="getClick()">Get Request</button>
+    <div class="col-xs-12 ml-5">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Body</th>
+          </tr>
+        </thead>
+        <tbody [hidden]="toggle">
+          <tr *ngFor="let get of getUsers">
+            <td>{{ get.id }}</td>
+            <td>{{ get.userId }}</td>
+            <td>{{ get.title }}</td>
+            <td>{{ get.body }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <div class="row">
+      <button class="btn btn-info mb-4" (click)="postRequest()">
+        Post Request
+      </button>
+      <button class="btn btn-danger ml-2 mb-4" (click)="deletePost()">
+        Delete User
+      </button>
+    </div>
+    <div class="col-xs-12 ml-5">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Post Requst JSON</th>
+          </tr>
+        </thead>
+        <tbody [hidden]="togglePost">
+          {{
+            postSome | json
+          }}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+input {
+  width: 400px;
+}
+
+.login-field {
+  margin: 80px auto;
+}
+
+button {
+  margin-top: 15px;
+}
+
+.error-msg {
+  color: rgb(252, 66, 66);
+  font-size: 0.7em;
+  font-weight: 600;
+}

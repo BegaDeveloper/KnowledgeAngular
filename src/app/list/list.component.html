@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="col-xs-12" id="listone">
+    <h3 class="mt-5">List One</h3>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Techonology</th>
+          <th>Position</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of firstList">
+          <td>{{ user.id }}</td>
+          <td>{{ user.employee }}</td>
+          <td>{{ user.title }}</td>
+          <td>{{ user.dir }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <hr />
+  <div class="col-xs-12">
+    <h3 class="mt-5">List Two</h3>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Techonology</th>
+          <th>Position</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let userTwo of secondList">
+          <td>{{ userTwo.id }}</td>
+          <td>{{ userTwo.employeer }}</td>
+          <td>{{ userTwo.title }}</td>
+          <td>{{ userTwo.dir }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

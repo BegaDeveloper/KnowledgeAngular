@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="login-field">
+    <h2 class="mb-5">Please Login</h2>
+    <div class="alert alert-danger" role="alert" *ngIf="message">
+      {{ message }}
+    </div>
+    <form *ngIf="!authService.getUser()">
+      <div class="username-div">
+        <label for="user">Username: ("user")</label>
+        <input
+          type="text"
+          name="user"
+          id="user"
+          class="form-control"
+          #username
+        />
+      </div>
+      <div class="password-div">
+        <label for="pass">Password: ("angular") </label>
+        <input
+          type="password"
+          name="password"
+          id="pass"
+          class="form-control"
+          #password
+        />
+      </div>
+      <div class="btn-div">
+        <button
+          class="btn btn-success"
+          (click)="login(username.value, password.value)"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+    <div class="well" *ngIf="authService.getUser()">
+      Logged in as {{ authService.getUser() }}
+      <a href (click)="logout()">Log out</a>
+    </div>
+  </div>
+</div>

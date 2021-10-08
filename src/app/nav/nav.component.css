@@ -1,0 +1,15 @@
+.nav-link {
+  font-size: 1.1em;
+  color: rgb(10, 9, 9);
+  transition: all 0.4s;
+  font-weight: 700;
+  margin: 0 10px 0 0;
+}
+
+.nav-link:hover {
+  color: rgb(0, 89, 255);
+}
+
+ul {
+  margin-left: 100px;
+}
